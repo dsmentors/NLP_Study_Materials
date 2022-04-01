@@ -1,4 +1,4 @@
-Popular Natural Language Processing Text Preprocessing Techniques Implementation In Python
+**Popular Natural Language Processing Text Preprocessing Techniques Implementation In Python**
 Using the text preprocessing techniques we can remove noise from raw data and makes raw data more valuable for building models.
 
 Here, raw data is nothing but data we collect from different sources like reviews from websites, documents, social media, twitter tweets, news articles etc.
@@ -11,7 +11,8 @@ So there is a need to learn these techniques to build effective natural language
 
 In this article we will discuss different text preprocessing techniques or methods like normalization, stemming, lemmatization, etc. for handling text to build various Natural Language Processing problems/models.
 
-Table of Contents
+**Table of Contents**
+
 Text Preprocessing Importance in NLP
 
 Different Text Preprocessing Techniques
@@ -50,7 +51,8 @@ Removing Extra Whitespaces
 
 Process of applying all text preprocessing techniques with an Example
 
-Text Preprocessing Importance in NLP
+**Text Preprocessing Importance in NLP**
+
 we said before text preprocessing is the first step in the Natural Language Processing pipeline. The importance of preprocessing is increasing in NLP due to noise or unclear data extracted or collected from different sources.
 
 Most of the text data collected from reviews of E-commerce websites like Amazon or Flipkart, tweets from twitter, comments from Facebook or Instagram, and other websites like Wikipedia, etc.
@@ -85,7 +87,8 @@ You can download and import that class to your code. We can get preprocessed tex
 
 Again the order of technique we need to use will differ from problem to problem.
 
-Different Text Preprocessing Techniques
+**Different Text Preprocessing Techniques**
+
 Let us jump to learn different types of text preprocessing techniques.
 
 In the next few minutes, we will discuss and learn the importance and implementation of these techniques.
@@ -96,7 +99,8 @@ Converting all our text into the lower case is a simple and most effective appro
 
 After using the lower casing, all three words are treated as a single word that is nlp.!!
 
-Screenshot%20from%202022-03-19%2023-08-02.png
+![download](https://user-images.githubusercontent.com/96867718/161251891-e15f3bb1-5b69-4f8b-9725-ffacf64b2e00.png)
+
 
 This method is useful for problems that are dependent on the frequency of words such as document classification.
 
@@ -129,8 +133,11 @@ ex_lowercase = "This is an example Sentence for LOWER case conversion"
 lowercase_result = lower_case_convertion(ex_lowercase)
 print(lowercase_result)
 this is an example sentence for lower case conversion
-Removal of HTML tags
-Screenshot%20from%202022-03-19%2023-13-52.png
+
+**Removal of HTML tags**
+
+![download](https://user-images.githubusercontent.com/96867718/161251966-17d6f8be-e4e8-4e45-b32e-81ed569cd4b2.png)
+
 
 This is the second essential preprocessing technique. The chances to get HTML tags in our text data is quite common when we are extracting or scraping data from different websites.
 
@@ -166,9 +173,9 @@ Result :-
  
  Hi, this is an example text with Html tags.  
  
- 
+ ![download](https://user-images.githubusercontent.com/96867718/161252020-07e1d6cf-c18a-493c-8b3e-ea8932a6d1c4.png)
 
-Screenshot%20from%202022-03-19%2023-15-41.png
+
 
 Implementation of Removing HTML tags using bs4 library
 
@@ -202,9 +209,9 @@ Result :-
 
 We can observe both the functions are giving the same result after removing HTML tags from our example text.
 
-Removal of URLs
+**Removal of URLs**
+![download](https://user-images.githubusercontent.com/96867718/161252105-e44f695e-ad36-409d-af5d-d79351e08861.png)
 
-Screenshot%20from%202022-03-19%2023-16-16.png
 
 URL is the short-form of Uniform Resource Locator. The URLs within the text refer to the location of another website or anything else.
 
@@ -212,9 +219,11 @@ If we are performing any website backlinks analysis, twitter or Facebook in that
 
 Otherwise, from URLs also we can not get any information. So we can remove it from our text. We can remove URLs from the text by using the python Regex library.
 
-Screenshot%20from%202022-03-19%2023-17-06.png
+![download](https://user-images.githubusercontent.com/96867718/161252127-87330c0b-d875-4ab5-9ec2-e23a1ba1b41d.png)
 
-Implementation of Removing URLs using python regex
+
+
+# Implementation of Removing URLs using python regex
 
 In the below script. We take example text with URLs and then call the 2 functions with that example text. In the remove_urls function, assign a regular expression to remove URLs to url_pattern after That, substitute URLs within the text with space by calling the re library's sub-function.
 
@@ -243,7 +252,7 @@ Result after removing URLs from text :-
  
 This is an example text for URLs like   &   etc.
 
-Removing Numbers
+# Removing Numbers
 
 We can remove numbers from the text if our problem statement doesn't require numbers.
 
@@ -251,7 +260,8 @@ For example, if we are working on financial related problems like banking or ins
 
 In those cases, we shouldn't remove numbers.
 
-Screenshot%20from%202022-03-19%2023-22-30.png
+![download](https://user-images.githubusercontent.com/96867718/161252208-09092a2f-7e2c-48df-8d0e-13c29d47a2b8.png)
+
 
 Implementation of Removing numbers using python regex
 
@@ -288,11 +298,12 @@ In the above removing_numbers function. We mentioned a pattern to recognize numb
 
 And then return text after removing the number to numbers_result variable.
 
-Converting numbers to words
+# Converting numbers to words
 
 our problem statement need valuable information from numbers in that case, we have to convert numbers to words. Similar problem statements which are discussed at the removing numbers (above section).
 
-Screenshot%20from%202022-03-19%2023-23-26.png
+![download](https://user-images.githubusercontent.com/96867718/161252274-f2f74881-a33f-496c-b4f1-7d7abe1727d5.png)
+
 
 Implementation of Converting numbers to words using python num2words library
 
@@ -335,15 +346,18 @@ In the above code, the num_to_words function is getting the text as input. In th
 
 Taking each word and checking if that word is digit or not. If the word is digit then convert that into words.
 
-Apply spelling correction
+# Apply spelling correction
 
-Screenshot%20from%202022-03-20%2010-43-00.png
+![download](https://user-images.githubusercontent.com/96867718/161252336-a0dec74e-7ed5-4f9a-ae47-3802297f64a9.png)
+
 
 Spelling correction is another important preprocessing technique while working with tweets, comments, etc. Because we can see incorrect spelling words in those areas of text. We need to make those misspelling words to correct spelling words.
 
 We can check and replace misspelling words with correct spelling by using two python libraries, one is pyspellchecker, and another one is autocorrect.
 
-Screenshot%20from%202022-03-20%2010-44-12.png
+![download](https://user-images.githubusercontent.com/96867718/161252388-457be9c9-0869-430c-a42c-560573408bf8.png)
+
+
 
 Implementation of spelling correction using python pyspellchecker library
 
@@ -435,14 +449,15 @@ Result :-
 This is another example for spell correction
 We can observe both methods given correct or expected solutions.
 
-We can observe both methods given correct or expected solutions.
+# We can observe both methods given correct or expected solutions.
 This is another common preprocessing technique in NLP. We can observe special characters at the top of the common letter or characters if we press a longtime while typing, for example, résumé.
 
 If we are not removing these types of noise from the text, then the model will consider resume and résumé; both are two different words.
 
 Even if both are the same. We can convert this accented character to ASCII characters by using the unidecode library.
 
-Screenshot%20from%202022-03-20%2012-17-15.png
+![download](https://user-images.githubusercontent.com/96867718/161252509-b0179823-60ea-4931-b7cc-0128e452dbd8.png)
+
 
 Implementation of accented text to ASCII converter in python
 
@@ -477,8 +492,9 @@ This is an example text with accented characters like deep learning and computer
 
 The above code, we use the unidecode method of the unidecode library with input text. Which converts accented characters to ASCII values
 
-Stemming
-Screenshot%20from%202022-03-20%2012-19-28.png
+# Stemming
+
+![download](https://user-images.githubusercontent.com/96867718/161252556-c72afea3-d3d3-47f9-b36a-330afbe6ab88.png)
 
 Stemming is reducing words to their base or root form by removing a few suffix characters from words. Stemming is the text normalization technique.
 
@@ -486,7 +502,8 @@ There are so many stemming algorithms available, but the most widely used one is
 
 For example, the result of books after stemming is a book, and the result of learning is learn.
 
-Screenshot%20from%202022-03-20%2012-20-22.png
+![download](https://user-images.githubusercontent.com/96867718/161252589-767b5917-16dd-4f23-b644-6c872c794826.png)
+
 
 But stemming doesn't always provide the correct form of words because this follows the rules like removing suffix characters to get base words.
 
@@ -536,9 +553,9 @@ Result after stemming technique :-
 program program with program languag
 In the porter_stemmer function, we tokenized the input using word_tokenize from the nltk library. And then, apply the stem function to each of the tokenized words and update the text with stemmer words.
 
-Lemmatization
+# Lemmatization
 
-Screenshot%20from%202022-03-20%2012-21-11.png
+![download](https://user-images.githubusercontent.com/96867718/161252640-1233f204-0481-49dd-b6dd-47f3b29d6260.png)
 
 The aim of usage of lemmatization is similar to the stemming technique to reduce inflection words to their original or base words. But the lemmatization process is different from the above approach.
 
@@ -586,13 +603,14 @@ Result of lemmatization
 Programers program with programing language
 We can see the differences between the outputs of stemming and lemmatization. Programmers program programming all are different, and for languages, lemma gives meaningful words but stemming words for that are meaningless.
 
-Differences between Stemming and Lemmatization
+# Differences between Stemming and Lemmatization
+![download](https://user-images.githubusercontent.com/96867718/161252683-73a3558a-60aa-43ed-9e68-e94d0f4ae641.png)
 
-Screenshot%20from%202022-03-20%2012-21-54.png
 
-Removal of Emojis
+# Removal of Emojis
 
-Screenshot%20from%202022-03-20%2012-25-10.png
+![download](https://user-images.githubusercontent.com/96867718/161252705-8a5b623b-66a3-4039-8f0b-512635684df7.png)
+
 
 In today's online communication, emojis play a very crucial role.
 
@@ -602,9 +620,10 @@ Let's see on that type of problem statement how we can remove emojis.
 
 Implementation of emoji removing For this we take code snippets from this GitHub Repo.
 
-Implementation of emoji removing
+# Implementation of emoji removing
+![download](https://user-images.githubusercontent.com/96867718/161252764-d73dd89d-ce20-4491-825e-efac85057a76.png)
 
-Screenshot%20from%202022-03-20%2012-26-10.png
+
 
 # Implementation of emoji removing
 
@@ -650,9 +669,10 @@ Result text after removing emojis :-
 
 This is a test  
 
-Removing of Punctuations or Special Characters
+# Removing of Punctuations or Special Characters
 
-Screenshot%20from%202022-03-20%2012-28-18.png
+![download](https://user-images.githubusercontent.com/96867718/161252818-b5441348-c399-4313-8cae-80c383d1ecad.png)
+
 
 Punctuations or special characters are all characters except digits and alphabets. List of all available special characters are [!"#$%&'()*+,-./:;<=>?@[]^_`{|}~].
 
@@ -664,7 +684,8 @@ For example, if we remove the period using the punctuation removing technique fr
 
 So we have to focus more on choosing punctuations.
 
-Screenshot%20from%202022-03-20%2012-29-26.png
+![download](https://user-images.githubusercontent.com/96867718/161252862-e298611e-5953-44e3-b8e6-16bb176c8eef.png)
+
 
 Implementation of removing punctuations using string library
 
@@ -918,9 +939,10 @@ For this process, we are providing a complete python code in our dataaspirant gi
 
 Import it into our text preprocessing class from the preprocessing file. Now we will discuss how to use it.
 
-Implementation of Complete preprocessing techniques
+# Implementation of Complete preprocessing techniques
 
-Screenshot%20from%202022-03-20%2012-42-05.png
+![download](https://user-images.githubusercontent.com/96867718/161252981-6eb26864-f80f-45cd-80eb-222e7bbe62dd.png)
+
 
 The below, we apply only a few text preprocessing techniques to know how we can use the importing class.
 
